@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "AlterFox",
+  "version": "1.0.0",
+  "description": "Markdown viewer with ACS-1 support and forced UTF-8 decoding.",
+  "": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*.md",
+        "*://*/*.markdown",
+        "*://*/*.mdown",
+        "*://*/*.mdwn",
+        "*://*/*.mkd",
+        "*://*/*.mkdn"
+      ],
+      "js": ["showdown.min.js", "alterfox.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
